@@ -2,11 +2,11 @@ import streamlit as st
 import plotly.express as px
 import pandas as pd
 
-df_livros = pd.read_csv(r'olistdata\olist_livros.csv')
+df_livros = pd.read_csv(r'olistdata/olist_livros.csv')
 
 df_livros = df_livros.drop(columns=['Unnamed: 0'])
 
-df = pd.read_csv(r'olistdata\linha_temporal.csv')
+df = pd.read_csv(r'olistdata/linha_temporal.csv')
 
 df_livros['order_approved_at'] = pd.to_datetime(df_livros['order_approved_at'], format='%Y-%m-%d %H:%M:%S')
 
